@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="apm.launch" />
+
+  <include file="rplidar.launch" />
+
+  <node name="detect_obstNode" pkg="main" type="detect_obst.py" output="sreen"/>
+
+  <node name="avoid_obstNode" pkg="main" type="avoid_obst.py" output="sreen"/>
+
+<launch>

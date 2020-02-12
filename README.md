@@ -1,2 +1,1 @@
-# autonomousboat
-autonomous boat project
+# Autonomousboat

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+
+<launch>
+
+	
+	<include file="amp.launch" />
+	<include file="rplidar.launch" />
+	
+	
+	<group ns="EviderObstacle">
+        	<node pkg="main" type="detect_obst.py" respawn="false" name="ObstacleDetect" launch-prefix="xterm -e" output="screen">	
+		</node>
+        
+       		<node pkg="main" type="avoid_obst.py" respawn="false" name="EviderObstacle" launch-prefix="xterm -e" output="screen">
+       		</node>
+        
+    	</group>
+
+
+ 
+    	<node pkg="main" type="main.py" respawn="false" name="main_fonction" launch-prefix="xterm -e" output="screen"/>
+ 
+   
+</launch>
+
+
+#To run this launchfiles, use the commande line: roslaunch package-name launch-file-name
+# => roslaunch auto_bateau autobateau.launch
